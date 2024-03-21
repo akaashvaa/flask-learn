@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/home.css') }}"
+    />
+    <title>HomePage</title>
+  </head>
+  <body>
+    <header>
+      <h2>Student Management System</h2>
+    </header>
+
+    <section>
+      <nav>
+        <ul>
+          <li><a href="{{ url_for('new_student')}}">Add a record</a></li>
+          <br />
+          <li><a href="{{ url_for('list') }}">View record</a></li>
+          <br />
+          <li><a href="{{ url_for('searchrecord') }}">Search record</a></li>
+          <br />
+          <li><a href="{{ url_for('logout') }}">Logout</a></li>
+        </ul>
+      </nav>
+
+      <center>
+        <h1>SMS</h1>
+        <p>The Student Information Management Module manages student data .</p>
+      </center>
+    </section>
+    <footer>
+      <p>@copyright 2024</p>
+    </footer>
+  </body>
+</html>

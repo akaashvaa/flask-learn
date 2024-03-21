@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search</title>
+    <style>
+      table {
+        margin-top: 5rem;
+      }
+      table,
+      th,
+      td {
+        width: 30%;
+
+        border: 2px solid black;
+        border-collapse: collapse;
+      }
+    </style>
+  </head>
+  <body>
+    <center>
+      <table>
+        <thead>
+          <td style="font-weight: bold">Name</td>
+          <td style="font-weight: bold">Address</td>
+          <td style="font-weight: bold">City</td>
+          <td style="font-weight: bold">Pincode</td>
+        </thead>
+
+        {% for row in rows %}
+        <tr>
+          <td>{{row["name"]}}</td>
+          <td>{{row["addr"]}}</td>
+          <td>{{ row["city"]}}</td>
+          <td>{{row['pin']}}</td>
+        </tr>
+        {% endfor %}
+      </table>
+      <br />
+      <a href="{{ url_for('home') }}">Go back to home page</a>
+    </center>
+  </body>
+</html>

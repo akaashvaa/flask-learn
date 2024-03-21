@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      input,
+      textarea {
+        width: 25%;
+        margin: 10px 0;
+        border-radius: 5px;
+        padding: 15px 18px;
+        box-sizing: border-box;
+      }
+      button {
+        background-color: #030804;
+        color: white;
+        padding: 14px 20px;
+        border-radius: 5px;
+        margin: 7px 0;
+        width: 25%;
+        font-size: 18px;
+      }
+    </style>
+    <title>Search Record</title>
+  </head>
+  <body>
+    <center>
+      <form action="{{ url_for('search') }}" method="POST">
+        <h3>Student Information</h3>
+
+        PINCODE<br />
+        <input type="text" required name="pin" /><br />
+        <input type="submit" value="submit" /><br />
+      </form>
+    </center>
+  </body>
+</html>
